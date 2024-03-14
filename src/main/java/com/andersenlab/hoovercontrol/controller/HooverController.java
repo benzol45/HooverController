@@ -20,11 +20,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Validated
 @RequiredArgsConstructor
-@RequestMapping("/hoover")
+@RequestMapping("/hoovers")
 public class HooverController {
     private final HooverService hooverService;
 
-    @PostMapping("/task")
+    @PostMapping("/tasks")
     @Operation(summary = "Create new task for the hoover")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Task was processed, returned a result",
