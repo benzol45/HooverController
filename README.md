@@ -33,3 +33,6 @@ And then run your app using the java command:
     $ java -jar target/HooverControl-0.0.1-SNAPSHOT.jar
 
 Your application should start up on port 8443 (HTTPS).
+
+## App using  
+Open OpenAPI UI https://localhost:8443/swagger-ui/index.html and interact with endpoint
