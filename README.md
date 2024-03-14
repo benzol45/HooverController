@@ -23,4 +23,13 @@ Output example:
 coords - hoover final position  
 patches - collected dirt patches  
 
-## App executing
+## App executing 
+To build your application simply run:
+
+    $ mvn package
+
+And then run your app using the java command:
+
+    $ java -jar target/HooverControl-0.0.1-SNAPSHOT.jar
+
+Your application should start up on port 8080.

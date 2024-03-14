@@ -9,8 +9,6 @@ public class HooverControlApplication {
         //https://www.baeldung.com/spring-boot-configure-tomcat
         //https://www.baeldung.com/spring-boot-https-self-signed-certificate
 
-    //TODO create repo and push
-
     public static void main(String[] args) {
         SpringApplication.run(HooverControlApplication.class, args);
     }
