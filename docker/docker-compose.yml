@@ -9,7 +9,7 @@ services:
       DB_URL: jdbc:postgresql://postgres:5432/hoover_control
       SPRING_PROFILES_ACTIVE: prod
     ports:
-      - "8433:8433"
+      - "8443:8443"
     volumes:
       - ./app/logs:/APP/logs
     depends_on:
