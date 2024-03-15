@@ -16,6 +16,13 @@ spring:
 
 server:
   port: ${PORT:8443}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+server:
   ssl:
     enabled: true
     key-store-type: PKCS12
@@ -23,4 +30,13 @@ server:
     key-store-password: ${KEYSTORE_PASSWORD:123qwe}
     protocol: TLS
     enabled-protocols: TLSv1.2
-#    TLS configuration manual https://www.baeldung.com/spring-tls-setup
+    #TLS configuration manual https://www.baeldung.com/spring-tls-setup
+
+---
+spring:
+  config:
+    activate:
+      on-profile: integration_test
+server:
+  ssl:
+    enabled: false
