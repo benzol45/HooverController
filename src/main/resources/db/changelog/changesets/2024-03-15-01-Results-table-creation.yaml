@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: create_results_table
+      author: Mikhail Kalinin
+      changes:
+        - createSequence:
+            sequenceName: result_id_seq
+            startValue: 1
+            incrementBy: 1
+        - createTable:
+            tableName: results
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  defaultValueSequenceNext: result_id_seq
+                  constraints:
+                    nullable: false
+                    unique: true
+                    primaryKey: true
+              - column:
+                  name: date
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: coordX
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: coordY
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: patches
+                  type: int
+                  constraints:
+                    nullable: false
