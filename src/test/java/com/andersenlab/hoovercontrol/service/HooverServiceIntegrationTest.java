@@ -1,23 +1,38 @@
 package com.andersenlab.hoovercontrol.service;
 
+import com.andersenlab.hoovercontrol.domain.Result;
 import com.andersenlab.hoovercontrol.dto.RequestDto;
 import com.andersenlab.hoovercontrol.dto.ResponseDto;
+import com.andersenlab.hoovercontrol.repository.ResultRepository;
 import com.andersenlab.hoovercontrol.util.ObjectCreator;
 import com.andersenlab.hoovercontrol.validator.RequestValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
+@ExtendWith(MockitoExtension.class)
 class HooverServiceIntegrationTest {
+    @Mock
+    private ResultRepository resultRepository;
     private HooverService hooverService;
 
     @BeforeEach
     void setUp() {
-        hooverService = new HooverService(new RoomService());
+        when(resultRepository.save(any())).thenAnswer(i->{
+            Result result = i.getArgument(0);
+            result.setId(1L);
+            return  result;
+        });
+        hooverService = new HooverService(new RoomService(), resultRepository);
     }
 
     @Test

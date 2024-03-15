@@ -7,6 +7,9 @@ import lombok.Data;
 @Data
 @Builder
 public class ResponseDto {
+    @Schema(description = "Id of current result in storage", example = "42")
+    private long id;
+
     @Schema(description = "A final hoover position as X and Y coordinates", example = "[1,1]")
     private int[] coords;
 
