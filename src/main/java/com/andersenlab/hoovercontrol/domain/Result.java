@@ -29,10 +29,10 @@ public class Result {
     @Column(name = "date")
     private LocalDateTime date;
 
-    @Column(name = "coordX")
+    @Column(name = "coordx")
     private int coordinateX;
 
-    @Column(name = "coordY")
+    @Column(name = "coordy")
     private int coordinateY;
 
     @Column(name = "patches")

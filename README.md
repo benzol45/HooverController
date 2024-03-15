@@ -34,5 +34,7 @@ And then run your app using the java command:
 
 Your application should start up on port 8443 (HTTPS).
 
+TODO добавить инфо про параметры окружения. Но после контейнера смысл пропадёт уже
+
 ## App using  
 Open OpenAPI UI https://localhost:8443/swagger-ui/index.html and interact with endpoint

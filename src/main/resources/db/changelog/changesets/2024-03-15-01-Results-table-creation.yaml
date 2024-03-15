@@ -24,12 +24,12 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: coordX
+                  name: coordx
                   type: int
                   constraints:
                     nullable: false
               - column:
-                  name: coordY
+                  name: coordy
                   type: int
                   constraints:
                     nullable: false
